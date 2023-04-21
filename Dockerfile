@@ -45,13 +45,6 @@ COPY . .
 RUN pip3 install --no-cache-dir -r requirements.txt
 
 
-COPY crontab /etc/cron.d/crontab
-
-RUN chmod 0644 /etc/cron.d/crontab
-
-RUN crontab /etc/cron.d/crontab
-
-
 # Make the entrypoint executable
 RUN chmod +x entrypoint.sh
 
